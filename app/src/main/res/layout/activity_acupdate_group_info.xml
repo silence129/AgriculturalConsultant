@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:TitleText="修改资料"
+        app:isShowBack="true"
+        app:isShowTitle="true"
+        android:id="@+id/tb_title"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_update_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_40"
+                android:gravity="center"
+                android:text="群组名称:" />
+
+            <EditText
+                android:id="@+id/et_group_update_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/space_20"
+                android:background="@null" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/gray_line_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_update_des"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_40"
+                android:gravity="center"
+                android:text="群组简介:" />
+
+            <EditText
+                android:id="@+id/et_group_update_des"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="@color/gray_line_bg" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

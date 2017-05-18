@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.org.nercita.agriculturalconsultant">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/App.Theme.Launch">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 设置环信应用的AppKey  范博文 2017.4.6 -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1596321#consultant" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".main.service.activity.MarketPriceActivity" />
+        <activity android:name=".main.service.activity.TechRulesActivity" />
+        <activity android:name=".main.service.activity.AgriculturalMaterialsActivity" />
+        <activity android:name=".main.service.activity.AgriculturalMaterialInfoActivity" />
+        <activity
+            android:name=".main.service.activity.TechRulesInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".main.home.activity.ForecastActivity" />
+
+        <activity android:name=".main.communicate.activity.TecQuestionActivity"/>
+        <activity android:name=".main.communicate.activity.NewTechGroupActivity"/>
+        <activity android:name=".main.communicate.activity.ACGroupChatActivity" />
+        <activity android:name=".main.communicate.activity.ACGroupDetailMsgActivity" />
+        <activity android:name=".main.communicate.activity.ACGroupPickContactsActivity" />
+        <activity android:name=".main.communicate.activity.ACUpdateGroupInfoActivity"></activity>
+        <activity android:name=".main.LoginActivity">
+
+        </activity>
+        <activity android:name=".main.RegestActivity"/>
+        <activity android:name=".main.me.activity.FarmManageActivity"/>
+        <activity android:name=".main.me.activity.UpDateRecoredActivity"/>
+        <activity android:name=".main.communicate.activity.TechQuestionContentActivity" />
+        <activity android:name=".main.communicate.activity.TechQuestionAskActivity" />
+        <activity android:name=".main.communicate.activity.PublishTechAnswerActivity" />
+        <activity android:name=".main.communicate.activity.ExpertQuestionContentActivity" />
+        <activity android:name=".main.communicate.activity.ExpertQuestionListActivity" />
+        <activity android:name=".main.communicate.activity.ExpertQuestionAskActivity" />
+        <activity android:name=".main.communicate.activity.PublishExpertAnswerActivity" />
+        <activity android:name=".common.WebViewActivity" />
+        <activity android:name=".main.service.activity.SupplyActivity" />
+        <activity android:name=".main.home.activity.LawsActivity" />
+        <activity android:name=".main.home.activity.LatestPriceActivity" />
+        <activity android:name=".main.me.activity.MyQuestionActivity"/>
+        <activity android:name=".main.me.activity.DesExpertQuestionActivity"/>
+        <activity android:name=".main.me.activity.PersonalSettingActivity"/>
+        <activity android:name=".main.NetWork.activity.BaseVedioActivity"/>
+        <activity android:name=".main.service.activity.MarkNewsListActivity" />
+        <activity android:name=".main.communicate.activity.ExpertListLibraryActivity"/>
+        <activity android:name=".utils.ImageGallery.ImageGalleryActivity"/>
+    </application>
+
+</manifest>

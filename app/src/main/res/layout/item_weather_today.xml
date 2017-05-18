@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qingtian_sy"
+            android:id="@+id/image_weather" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temp_weather"
+            android:text="20℃"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/image_weather"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_weight="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/wind_weather"-->
+            <!--android:text="东南风一级"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/white"/>-->
+    <!---->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_weight="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/hum_weather"-->
+            <!--android:text="湿度59％"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/white"/>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

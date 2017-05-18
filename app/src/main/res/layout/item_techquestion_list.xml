@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/touxiang_nongmin"
+        android:id="@+id/avatar_asker"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提问人"
+        android:id="@+id/name_asker"
+        android:layout_toRightOf="@+id/avatar_asker"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/address_asker"
+        android:layout_toRightOf="@+id/avatar_asker"
+        android:layout_alignBottom="@+id/avatar_asker"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:id="@+id/content_question_tech"
+        android:layout_below="@+id/avatar_asker"
+        android:layout_marginTop="10dp"/>
+
+    <cn.org.nercita.agriculturalconsultant.view.MeasuredGridView
+        android:id="@+id/gridView_tech_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:layout_below="@+id/content_question_tech">
+    </cn.org.nercita.agriculturalconsultant.view.MeasuredGridView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:id="@+id/time_question_tech"
+        android:layout_below="@+id/gridView_tech_question"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

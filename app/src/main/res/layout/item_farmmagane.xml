@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"  >
+    <LinearLayout
+        android:padding="@dimen/dp_9"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colorSeekBar_text"
+            android:textSize="@dimen/sp_15"
+            android:id="@+id/tv_item_activity_my_life_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这几天作物长势不错！"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <cn.org.nercita.agriculturalconsultant.view.MeasuredGridView
+            android:id="@+id/gv_image"
+            android:numColumns="4"
+            android:horizontalSpacing="@dimen/dp_5"
+            android:verticalSpacing="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </cn.org.nercita.agriculturalconsultant.view.MeasuredGridView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="两分钟前"
+                android:gravity="right"
+                android:layout_gravity="center"
+                android:id="@+id/updatetime"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textSize="12sp"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

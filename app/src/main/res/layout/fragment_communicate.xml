@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeef"
+    android:orientation="vertical">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:TitleText="技术交流"
+        app:isShowTitle="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#EFEFEF"></View>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/tec_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/tv_AskTheExperts"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_wzj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="问专家"
+                            android:textColor="#CD6522"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_zdzj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_wzj"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="2dp"
+                            android:text="指定专家作答"
+                            android:textColor="#9A9A9A"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/jsjl_wzj" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tv_Questions_Agricultural"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_njwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="农技问答"
+                            android:textColor="#CD6522"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cttw"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_njwd"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="2dp"
+                            android:text="传图提问"
+                            android:textColor="#9A9A9A"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="35dp"
+                            android:src="@drawable/jsjs_njwd" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#EFEFEF"></View>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_new_group"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_new_group"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="新建群组"
+                        android:textColor="@color/btn_gray_pressed" />
+
+                    <View
+                        android:layout_width="@dimen/space_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/space_5"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:background="#CD6522" />
+
+                    <TextView
+                        android:id="@+id/tv_display_all"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="添加群组"
+                        android:textColor="@color/btn_gray_pressed" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_expert_community"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        >
+
+                        <View
+                            android:layout_width="@dimen/space_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/space_5"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:background="@color/global_color" />
+
+                        <TextView
+                            android:id="@+id/tv_person_community"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="个人交流"
+
+                            android:textColor="@color/btn_gray_pressed" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_tech_ask"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        >
+
+                        <View
+                            android:layout_width="@dimen/space_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/space_5"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:background="@color/global_color" />
+
+                        <TextView
+                            android:id="@+id/tv_tech_ask"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="农技问答"
+
+                            android:textColor="@color/btn_gray_pressed" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/lin_jainshezhong"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/jianshezhong"
+                        />
+                    <TextView
+                        android:clickable="true"
+                        android:id="@+id/txt_dianjichuangjian"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="您还未加入群组,点击创建"
+                        android:textColor="#09b7ec"
+                        />
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/ll_group_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_group_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <RelativeLayout
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/space_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/space_5">
+                            <ImageView
+                                android:id="@+id/iv_process_validate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:src="@drawable/njb_jsjl_qsq" />
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/txt_red_bac"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@drawable/txt_bg"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/space_30"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/space_5"
+                            android:background="@android:color/white"
+                            android:gravity="center_vertical"
+                            android:text="我创建的"
+                            android:textColor="@color/global_color"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/line_color_gray" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_group_mine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_5" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_other_group_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_30"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/space_5"
+                            android:gravity="center_vertical"
+                            android:text="我参与的"
+                            android:textColor="#15a460"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/line_color_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_group_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#EFEFEF"></View>
+
+
+          <!--  <LinearLayout
+                android:id="@+id/new_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ques_content1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:lines="2"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:text=" "
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/dp_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/sp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/space_5"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="类别:"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                        <TextView
+                            android:id="@+id/tv_plant_type"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="地址:"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                        <TextView
+                            android:id="@+id/tv_question_address"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/space_16"
+                            android:text=" " />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.nercita.agricultural.technology.view.ATMyGridView
+                        android:id="@+id/question_content_gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:numColumns="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10">
+
+                    <com.nercita.agricultural.common.ATCircleImageView
+                        android:id="@+id/civ_question_photo1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/touxiang_default" />
+
+                    <TextView
+                        android:id="@+id/tv_question_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1.5"
+                        android:lines="1"
+                        android:padding="@dimen/dp_4"
+                        android:text=" "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/question_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="2.5"
+                        android:padding="@dimen/dp_5"
+                        android:text=" " />
+
+                    <ImageView
+                        android:id="@+id/question_luntan"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:src="@drawable/luntan" />
+
+                    <TextView
+                        android:id="@+id/pinglun_count"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:text="12" />
+
+                    &lt;!&ndash;<LinearLayout&ndash;&gt;
+                        &lt;!&ndash;android:layout_width="0dp"&ndash;&gt;
+                        &lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;
+                        &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                        &lt;!&ndash;android:layout_weight="0.8">&ndash;&gt;
+
+                        &lt;!&ndash;<ImageView&ndash;&gt;
+                            &lt;!&ndash;android:id="@+id/img_answer"&ndash;&gt;
+                            &lt;!&ndash;android:layout_width="@dimen/dp_17"&ndash;&gt;
+                            &lt;!&ndash;android:layout_height="@dimen/dp_17"&ndash;&gt;
+                            &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                            &lt;!&ndash;android:layout_marginLeft="@dimen/dp_10"&ndash;&gt;
+                            &lt;!&ndash;android:background="@drawable/njtg_sy_zjhd" />&ndash;&gt;
+                    &lt;!&ndash;</LinearLayout>&ndash;&gt;
+
+                    &lt;!&ndash;<TextView&ndash;&gt;
+                        &lt;!&ndash;android:id="@+id/tv_answer"&ndash;&gt;
+                        &lt;!&ndash;android:layout_width="0dp"&ndash;&gt;
+                        &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                        &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                        &lt;!&ndash;android:layout_marginLeft="@dimen/dp_10"&ndash;&gt;
+                        &lt;!&ndash;android:layout_weight="1"&ndash;&gt;
+                        &lt;!&ndash;android:text="解答"&ndash;&gt;
+                        &lt;!&ndash;android:textSize="@dimen/dp_15" />&ndash;&gt;
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#eeeeee" />
+
+                <com.nercita.agricultural.technology.view.ATMyListView
+                    android:id="@+id/my_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/new_question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ques_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:lines="2"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:text=" "
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/dp_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/sp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/space_5"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="类别:"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                        <TextView
+                            android:id="@+id/tv_plant_type2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="地址:"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_size_16"
+                            android:textColor="@color/gray_normal"
+                            />
+                        <TextView
+                            android:id="@+id/tv_question_address2"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/space_16"
+                            android:text=" " />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.nercita.agricultural.technology.view.ATMyGridView
+                        android:id="@+id/question_content_gridView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_8"
+                        android:numColumns="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_35"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10">
+
+                    <com.nercita.agricultural.common.ATCircleImageView
+                        android:id="@+id/civ_question_photo12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/touxiang_default" />
+
+                    <TextView
+                        android:id="@+id/tv_question_name2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1.5"
+                        android:lines="1"
+                        android:padding="@dimen/dp_4"
+                        android:text=" "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/question_time2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="2.5"
+                        android:padding="@dimen/dp_5"
+                        android:text=" " />
+
+                    <ImageView
+                        android:id="@+id/question_luntan2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:src="@drawable/luntan" />
+
+                    <TextView
+                        android:id="@+id/pinglun_count2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:text="12" />
+
+                    &lt;!&ndash;<LinearLayout&ndash;&gt;
+                        &lt;!&ndash;android:layout_width="0dp"&ndash;&gt;
+                        &lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;
+                        &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                        &lt;!&ndash;android:layout_weight="0.8">&ndash;&gt;
+
+                        &lt;!&ndash;<ImageView&ndash;&gt;
+                            &lt;!&ndash;android:id="@+id/img_answer2"&ndash;&gt;
+                            &lt;!&ndash;android:layout_width="@dimen/dp_17"&ndash;&gt;
+                            &lt;!&ndash;android:layout_height="@dimen/dp_17"&ndash;&gt;
+                            &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                            &lt;!&ndash;android:layout_marginLeft="@dimen/dp_10"&ndash;&gt;
+                            &lt;!&ndash;android:background="@drawable/njtg_sy_zjhd" />&ndash;&gt;
+                    &lt;!&ndash;</LinearLayout>&ndash;&gt;
+
+                    &lt;!&ndash;<TextView&ndash;&gt;
+                        &lt;!&ndash;android:id="@+id/tv_answer2"&ndash;&gt;
+                        &lt;!&ndash;android:layout_width="0dp"&ndash;&gt;
+                        &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                        &lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;
+                        &lt;!&ndash;android:layout_marginLeft="@dimen/dp_10"&ndash;&gt;
+                        &lt;!&ndash;android:layout_weight="1"&ndash;&gt;
+                        &lt;!&ndash;android:text="解答"&ndash;&gt;
+                        &lt;!&ndash;android:textSize="@dimen/dp_15" />&ndash;&gt;
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#eeeeee" />
+
+                <com.nercita.agricultural.technology.view.ATMyListView
+                    android:id="@+id/my_lv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_"
+        app:isShowTitle="true"
+        app:isShowBack="true"
+        app:TitleText="专家问答">
+
+    </cn.org.nercita.agriculturalconsultant.view.TitleBar>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_expert_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/divider"
+        android:dividerHeight="@dimen/dp_8"
+        ptr:ptrMode="both">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

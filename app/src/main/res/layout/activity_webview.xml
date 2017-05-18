@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb_activity_webview"
+        app:isShowTitle="true"
+        app:TitleText="详情"
+        app:isShowCommit="false"
+        app:isShowBack="true">
+
+    </cn.org.nercita.agriculturalconsultant.view.TitleBar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_activity_webview"
+        android:gravity="center"
+        android:text="暂时无法打开"
+        android:visibility="gone"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wv_activity_webview">
+    </WebView>
+
+</LinearLayout>

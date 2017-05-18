@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:TitleText="基地"
+        app:isShowTitle="true"></cn.org.nercita.agriculturalconsultant.view.TitleBar>
+
+    <LinearLayout
+        android:id="@+id/ll_search_section_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="输入基地名称"
+            android:lines="1"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/search_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.2"
+            android:clickable="true"
+            android:gravity="right|center"
+            android:text="搜索"
+            android:textColor="@color/title_green"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:id="@+id/square"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/xiasanjiao"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="区域"
+            android:textColor="@color/title_green"/>
+
+        <TextView
+            android:id="@+id/leavl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/xiasanjiao"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:text="院所"
+            android:textColor="@color/title_green"/>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/xiasanjiao"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="类型"
+            android:textColor="@color/title_green"/>
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/baseinfo_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"
+        ptr:ptrMode="both">
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>

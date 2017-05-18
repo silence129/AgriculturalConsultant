@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ddd"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <cn.org.nercita.agriculturalconsultant.view.CircleImageView
+                android:id="@+id/reply_img"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_gravity="top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/touxiang_nongmin"
+                android:layout_alignParentTop="true"/>
+            <TextView
+                android:id="@+id/reply_expertname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="专家名称"
+                android:layout_below="@+id/reply_img"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_6"
+            android:text="答案"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/sp_16"
+            android:layout_toRightOf="@+id/ddd"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

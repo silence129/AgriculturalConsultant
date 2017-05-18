@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:id="@+id/tabtitle"
+        app:isShowTitle="true"
+        app:isShowBack="true"
+        app:TitleText="问答详情"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.org.nercita.agriculturalconsultant.view.TitleBar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/touxiang_nongmin"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"/>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/question_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="李思思"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_18"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_25"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="茄子地能不能种马铃薯"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <cn.org.nercita.agriculturalconsultant.view.MeasuredGridView
+                android:id="@+id/gridView_tech_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp">
+            </cn.org.nercita.agriculturalconsultant.view.MeasuredGridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/_question_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="茄子地能不能种马铃薯？"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/question_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        android:text=""/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@drawable/reply_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp_8"
+                    android:text="专家回复"
+                    android:textColor="@color/title_green"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"/>
+                <ImageView
+                    android:padding="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/answer_img"
+                    android:id="@+id/updateanswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <cn.org.nercita.agriculturalconsultant.view.MeasuredListView
+                android:id="@+id/expertanswerlv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </cn.org.nercita.agriculturalconsultant.view.MeasuredListView>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/noanswer"
+                android:gravity="center"
+                android:text="暂无回复"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

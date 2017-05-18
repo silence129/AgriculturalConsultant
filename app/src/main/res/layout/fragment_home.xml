@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_home"
+        app:isShowTitle="true"
+        app:TitleText="首页">
+    </cn.org.nercita.agriculturalconsultant.view.TitleBar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home_refresh">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+<!--天气-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather_home">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="20℃"
+                        android:id="@+id/temp_home_now"
+                        android:drawableRight="@drawable/qingtian_sy"
+                        android:drawablePadding="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:padding="15dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:id="@+id/tmp_home"
+                        android:drawableLeft="@drawable/wendu_sy"
+                        android:drawablePadding="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/temp_home_now"/>
+                    <TextView
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:id="@+id/wind_home"
+                        android:drawableLeft="@drawable/feng_sy"
+                        android:drawablePadding="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tmp_home"
+                        android:layout_above="@+id/rain_home"
+                        />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/jiangshui_sy"
+                        android:drawablePadding="5dp"
+                        android:layout_marginRight="15dp"
+                        android:text=""
+                        android:id="@+id/rain_home"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignBottom="@+id/temp_home_now"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/title_green"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:drawableLeft="@drawable/dingwei_sy_icon"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/location_home"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/title_green"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                </View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:drawableLeft="@drawable/riqi_sy_icon"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/calendar_home"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/title_green"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                </View>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_item"
+                    android:padding="5dp"
+                    android:id="@+id/more_0"
+                    android:layout_marginTop="10dp">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/title_green"
+                        android:layout_marginLeft="5dp">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最新资讯"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_news_1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/preview_image_news1"
+                        android:src="@drawable/news_default"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="标题"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:lines="2"
+                        android:id="@+id/title_news1"
+                        android:layout_toRightOf="@+id/preview_image_news1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1小时前"
+                        android:id="@+id/time_news1"
+                        android:layout_toRightOf="@+id/preview_image_news1"
+                        android:layout_alignBottom="@+id/preview_image_news1"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="农民日报"
+                        android:id="@+id/source_news1"
+                        android:layout_alignBottom="@+id/time_news1"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/title_green"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_news_2"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/preview_image_news2"
+                        android:src="@drawable/news_default"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="标题"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:lines="2"
+                        android:id="@+id/title_news2"
+                        android:layout_toRightOf="@+id/preview_image_news2"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1小时前"
+                        android:id="@+id/time_news2"
+                        android:layout_toRightOf="@+id/preview_image_news2"
+                        android:layout_alignBottom="@+id/preview_image_news2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="农民日报"
+                        android:id="@+id/source_news2"
+                        android:layout_alignBottom="@+id/time_news2"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+
+                <!--<cn.org.nercita.agriculturalconsultant.view.MeasuredListView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/lv_news_home">-->
+                <!--</cn.org.nercita.agriculturalconsultant.view.MeasuredListView>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_item"
+                    android:padding="5dp"
+                    android:id="@+id/more_1"
+                    android:layout_marginTop="10dp">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/title_green"
+                        android:layout_marginLeft="5dp">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最新价格"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!--<cn.org.nercita.agriculturalconsultant.view.MeasuredListView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/lv_price_new">-->
+                <!--</cn.org.nercita.agriculturalconsultant.view.MeasuredListView>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rl_price_1"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/image_price_newest1"
+                        android:src="@drawable/pic_default_all"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/pppp"
+                        android:layout_toRightOf="@+id/image_price_newest1"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:text="产品"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/name_price1"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:id="@+id/time_price1"
+                            android:text="十分钟前"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/market_price1"
+                        android:layout_toRightOf="@+id/image_price_newest1"
+                        android:layout_below="@+id/pppp"
+                        android:layout_above="@+id/price_price"
+                        android:gravity="center_vertical"
+                        android:text="藁城·综合市场"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price_price1"
+                        android:text="¥8.00元/斤"
+                        android:textColor="@color/orange"
+                        android:layout_toRightOf="@+id/image_price_newest1"
+                        android:layout_alignBottom="@+id/image_price_newest1"
+                        android:paddingBottom="5dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/title_green"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_price_2"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/image_price_newest2"
+                        android:src="@drawable/pic_default_all"
+                        android:scaleType="centerCrop"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/pppp1"
+                        android:layout_toRightOf="@+id/image_price_newest2"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:layout_height="wrap_content"
+                            android:text="产品"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/name_price2"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:id="@+id/time_price2"
+                            android:text="十分钟前"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/market_price2"
+                        android:layout_toRightOf="@+id/image_price_newest2"
+                        android:layout_below="@+id/pppp1"
+                        android:layout_above="@+id/price_price2"
+                        android:gravity="center_vertical"
+                        android:text="藁城·综合市场"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price_price2"
+                        android:text="¥8.00元/斤"
+                        android:textColor="@color/orange"
+                        android:layout_toRightOf="@+id/image_price_newest2"
+                        android:layout_alignBottom="@+id/image_price_newest2"
+                        android:paddingBottom="5dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

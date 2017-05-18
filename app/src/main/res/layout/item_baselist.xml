@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/white"
+    android:padding="@dimen/dp_5"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_90">
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_default_all"
+            android:id="@+id/basepic"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_90"/>
+        <ImageView
+            android:id="@+id/wulian"
+            android:visibility="invisible"
+            android:src="@drawable/xinpz_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dp_5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/basename"
+            android:layout_weight="1"
+            android:lines="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:text="小汤山草莓种植基地"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/export"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="责任专家： 董静"/>
+        <TextView
+            android:gravity="center"
+            android:text="地址： 北京市昌平区小汤山镇"
+            android:id="@+id/location"
+            android:layout_weight="1"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+</LinearLayout>

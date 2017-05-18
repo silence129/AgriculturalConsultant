@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/activity_me_setting"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <cn.org.nercita.agriculturalconsultant.view.TitleBar
+        android:id="@+id/title"
+        app:isShowTitle="true"
+        app:TitleText="设置"
+        app:isShowBack="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.org.nercita.agriculturalconsultant.view.TitleBar>
+
+    <LinearLayout
+        android:id="@+id/Ll_setting_clean_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_setting_clean_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingBottom="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="7dp"
+            android:text="清理缓存"
+            android:textSize="16sp" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_setting_cache_size"-->
+        <!--android:text="大小"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="right|center"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:textSize="18sp"/>-->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ProgressBar
+            android:id="@+id/pb_setting_update"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_setting_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingBottom="7dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="7dp"
+            android:text="版本更新"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+  <!--  <TextView
+        android:id="@+id/tv_setting_modify_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:paddingBottom="7dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="7dp"
+        android:text="修改密码"
+        android:textSize="16sp"
+       />-->
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_bg_orange"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

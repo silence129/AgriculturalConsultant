@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/image_price_newest"
+        android:src="@drawable/pic_default_all"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/pppp"
+        android:layout_toRightOf="@+id/image_price_newest"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="产品"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:id="@+id/name_price"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/time_price"
+            android:text="十分钟前"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/market_price"
+        android:layout_toRightOf="@+id/image_price_newest"
+        android:layout_below="@+id/pppp"
+        android:layout_above="@+id/price_price"
+        android:gravity="center_vertical"
+        android:text="藁城·综合市场"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_price"
+        android:text="¥8.00元/斤"
+        android:textColor="@color/orange"
+        android:layout_toRightOf="@+id/image_price_newest"
+        android:layout_alignBottom="@+id/image_price_newest"
+        android:paddingBottom="5dp"/>
+
+</RelativeLayout>

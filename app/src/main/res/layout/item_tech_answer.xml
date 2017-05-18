@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/touxiang_nongmin"
+            android:id="@+id/avatar_answer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回答人"
+            android:id="@+id/name_answer"
+            android:layout_toRightOf="@+id/avatar_answer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:id="@+id/reply_this_answer"
+            android:layout_alignTop="@+id/name_answer"
+            android:layout_alignBottom="@+id/address_answer"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/address_answer"
+            android:layout_toRightOf="@+id/avatar_answer"
+            android:layout_alignBottom="@+id/avatar_answer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content_question_tech"
+            android:layout_below="@+id/avatar_answer"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:id="@+id/time_question_tech"
+            android:layout_below="@+id/content_question_tech"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/image_zan"
+            android:src="@drawable/zan"
+            android:layout_toLeftOf="@+id/count_zan"
+            android:layout_below="@+id/time_question_tech"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/count_zan"
+            android:text="0"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/image_pinglun"
+            android:layout_below="@+id/time_question_tech"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/image_pinglun"
+            android:src="@drawable/pinglun"
+            android:layout_toLeftOf="@+id/count_pinglun"
+            android:layout_below="@+id/time_question_tech"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/count_pinglun"
+            android:text="0"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/time_question_tech"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/line"
+            android:background="#eeeeee"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/count_pinglun"/>
+
+        <cn.org.nercita.agriculturalconsultant.view.MeasuredListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/replyofanswer_tech"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/line"
+            android:visibility="gone">
+        </cn.org.nercita.agriculturalconsultant.view.MeasuredListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

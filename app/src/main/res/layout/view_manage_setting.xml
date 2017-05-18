@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_group_item_click"
+    android:padding="@dimen/space_5"
+    >
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_manage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+        <ImageView
+            android:layout_width="@dimen/space_20"
+            android:layout_height="@dimen/space_20"
+            android:background="@drawable/group_setting"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_marginLeft="@dimen/space_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="管理"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+</LinearLayout>
